@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pathfinding Visualizer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">◆</span>
+      <div class="brand-text">
+        <h1>Pathfinding Visualizer</h1>
+        <p>Watch BFS, DFS, Dijkstra &amp; A* explore a grid in real time</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label class="control">
+        <span>Algorithm</span>
+        <select id="algoSelect">
+          <option value="dijkstra">Dijkstra's Algorithm</option>
+          <option value="astar">A* Search</option>
+          <option value="bfs">Breadth-First Search</option>
+          <option value="dfs">Depth-First Search</option>
+        </select>
+      </label>
+
+      <label class="control">
+        <span>Speed</span>
+        <select id="speedSelect">
+          <option value="10">Fast</option>
+          <option value="25" selected>Normal</option>
+          <option value="60">Slow</option>
+        </select>
+      </label>
+
+      <button id="visualizeBtn" class="btn btn-primary">Visualize</button>
+      <button id="clearWallsBtn" class="btn">Clear Walls</button>
+      <button id="clearBoardBtn" class="btn">Reset Board</button>
+      <button id="mazeBtn" class="btn">Generate Maze</button>
+    </div>
+  </header>
+
+  <section class="legend">
+    <span class="legend-item"><i class="swatch swatch-start"></i> Start</span>
+    <span class="legend-item"><i class="swatch swatch-end"></i> Target</span>
+    <span class="legend-item"><i class="swatch swatch-wall"></i> Wall</span>
+    <span class="legend-item"><i class="swatch swatch-visited"></i> Visited</span>
+    <span class="legend-item"><i class="swatch swatch-path"></i> Shortest Path</span>
+    <span class="legend-hint">Drag the start/target node · Click &amp; drag on empty cells to draw walls</span>
+  </section>
+
+  <main class="board-wrap">
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <footer class="statusbar">
+    <span id="statusText">Ready. Choose an algorithm and hit Visualize.</span>
+    <span id="statsText"></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

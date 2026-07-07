@@ -2,7 +2,7 @@
 
 An interactive grid-based visualizer for classic pathfinding algorithms — watch **BFS**, **DFS**, **Dijkstra's Algorithm**, and **A\* Search** explore a maze in real time and trace out the shortest path.
 
-**Live Demo:** _add your GitHub Pages link here after deployment_
+**Live Demo:** [https://suhanibansal20.github.io/pathfinding-visualize/](https://suhanibansal20.github.io/pathfinding-visualize/)
 
 ---
 
